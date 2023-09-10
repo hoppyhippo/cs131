@@ -1,0 +1,43 @@
+  508  man sort
+  509  head taxidata.tar 
+  510  cd cs131/
+  511  cd ws3/
+  512  ls
+  513  cp /datasets/taxidata.tar.gz .
+  514  gunzip taxidata.tar.gz 
+  516  head temp.txt 
+  517  sort -n temp.txt > ws3.txt
+  518  head ws3.txt 
+  519  cat ws3.txt 
+  520  uniq -c ws3.txt 
+  521  wc -l temp.txt 
+  522  tail temp.txt 
+  523  head ws3.txt 
+  524  tail ws3.txt 
+  532  grep -Ea 2019-01 taxidata.tar > 2019-01.csv
+  534  grep -Ea 2019-02 taxidata.tar > 2019-02.csv
+  535  head 2019-02.csv 
+  538  head temp.txt 
+  542  sort -t, -k 8n,8 2019-01.csv > temp.txt 
+  543  head temp.txt 
+  547  wc -l 2019-01.csv
+  548  cut -d ',' -f 8 2019-01.csv 
+  549  cut -d ',' -f 8 2019-01.csv > temp.txt 
+  550  uniq -c temp.txt 
+  552  head sorted2019-01.txt 
+  553  tail sorted2019-01.txt 
+  554  uniq -c sorted2019-01.txt 
+  555  cut -d ',' -f 8 2019-01.csv | sort -n > temp.txt 
+  558  head sorted2019-01.txt 
+  567  cut -d ',' -f 8 2019-01.csv | sort -n | uniq -c | sort -n > sorted2019-01.txt 
+  568  head sorted2019-01.txt 
+  569  tail sorted2019-01.txt 
+  570  head ws3.txt 
+  571  tail -n 3 sorted2019-01.txt > ws3.txt 
+  572  cat ws3.txt 
+  573  cut -d ',' -f 8 2019-02.csv | sort -n | uniq -c | sort -n > sorted2019-02.txt 
+  574  tail sorted2019-02.txt 
+  575  tail -n 3 sorted2019-02.txt >> ws3.txt 
+  576  cat ws3.txt 
+  577  vim ws3.txt 
+  578  history > cmds.log

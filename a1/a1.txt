@@ -1,17 +1,39 @@
+2) 'echo' $HOME
 /mnt/scratch/jeffrey23fa
+
+3) 'id' command
 uid=1005(jeffrey23fa) gid=1005(jeffrey23fa) groups=1005(jeffrey23fa)
+
+4) No, you cannot cd in it. Yes, you can 'ls' it. Yes, you can 'ls -l' it. No, you cannot create files under it.
+-bash: cd: temp: Permission denied
+total 0
+touch: cannot touch 'temp/testfile.txt': Permission denied
+
+5) Yes, you can 'cp' a directory and to cp an entire directory you use 'cp -r'.
+results from 'ls temp3':
 temp2
+
+results from 'ls' in a1 directory:
 a1.txt
 cmds.log
 scripta1.txt
 temp
 temp3
-temporaryscript.txt
-testfile.txt
+temporarydirectory
 test.txt
+
+results from 'ls temporarydirectory':
+temp3
+
+results from 'ls temporarydirectory/temp3':
+temp2
+
+6) /proc/meminfo and /proc/cpuinfo
 iomem
 meminfo
 cpuinfo
+
+7) My server has 73080512 kB of memory on it. 
 MemTotal:       73080512 kB
 MemFree:         1155968 kB
 MemAvailable:   59104704 kB
@@ -22,6 +44,8 @@ Active:         42183744 kB
 Inactive:       18025344 kB
 Active(anon):     444800 kB
 Inactive(anon):  1269248 kB
+
+8) There are 256 processors on my server. The processor architecutre name is POWER8. The processor speed is 3.425 GHz.
 processor	: 0
 cpu		: POWER8 (architected), altivec supported
 clock		: 3425.000000MHz
@@ -1334,6 +1358,8 @@ objrepos
 os-release
 sos
 yum.repos.d
+
+9) Operating System Version is 8.6 (Oopta). Located in /etc/os-release
 NAME="Red Hat Enterprise Linux"
 VERSION="8.6 (Ootpa)"
 ID="rhel"
@@ -1351,4 +1377,6 @@ REDHAT_BUGZILLA_PRODUCT="Red Hat Enterprise Linux 8"
 REDHAT_BUGZILLA_PRODUCT_VERSION=8.6
 REDHAT_SUPPORT_PRODUCT="Red Hat Enterprise Linux"
 REDHAT_SUPPORT_PRODUCT_VERSION="8.6"
+
+10) Permission for file containing OS version information is lrwxrwxrwx.
 lrwxrwxrwx. 1 root root 22 Apr  6  2022 /etc/os-release -> ..//usr/lib/os-release

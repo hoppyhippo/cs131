@@ -1,0 +1,79 @@
+  commands for Q2:
+  769  echo $HOME > a1.txt 
+  
+  commands for Q3:
+  770  id >> a1.txt 
+  
+  commands for Q4:
+  771  mkdir temp
+  772  chmod -x temp
+  773  cd temp
+       cd temp 2>> a1.txt
+       ls temp
+       ls temp >> a1.txt
+       ls -l temp
+       ls -l temp 2>> a1.txt
+       ls -l temp &>> a1.txt
+       touch temp/testfile.txt 2>> a1.txt
+  779  chmod -x temp/
+  784  cd temp
+  785  ls
+  786  ls temp
+  
+  commands for Q5:  
+  787  mkdir temp2
+  788  mv temp2 temp3
+       mkdir temporarydirectory
+  863  cp -r temp3 temporarydirectory/
+  864  ls temp3/ 
+  865  ls temporarydirectory/
+  870  ls temporarydirectory/temp3/
+       ls temp3/ >> a1.txt
+  871  ls temporarydirectory/ >> a1.txt
+  872  ls temporarydirectory/temp3/ >> a1.txt
+  
+  commands for Q6: 
+  797  ls /proc/ | grep mem >> a1.txt 
+  798  ls /proc/ | grep cpu >> a1.txt 
+  799  ls /proc/ | grep mem 
+  800  ls /proc/ | grep cpu 
+  
+  commands for Q7:
+  801  head /proc/meminfo
+  802  head /proc/meminfo >> a1.txt 
+  
+  commands for Q8:
+  803  head /proc/cpuinfo
+  804  tail /proc/cpuinfo
+  805  cat /proc/cpuinfo
+  806  head /proc/cpuinfo >> a1.txt 
+  807  tail /proc/cpuinfo >> a1.txt 
+  808  cat /proc/cpuinfo >> a1.txt 
+  
+  commands for Q9:
+  809  ls /etc/ | grep os 
+  810  ls /etc/ | grep os >> a1.txt 
+  811  cat /etc/os-release 
+  812  cat /etc/os-release >> a1.txt 
+  
+  commands for Q10:
+  814  ls -l /etc/os-release 
+  815  ls -l /etc/os-release >> a1.txt 
+  
+
+  816  vim a1.txt 
+  836  ls
+  841  vim a1.txt 
+  843  head a1.txt 
+  844  vim a1.txt 
+  845  history
+  846  ls temp3
+  847  ls
+  848  vim a1.txt 
+  904  ls
+  906  vim a1.txt 
+  907  git add a1.txt 
+  908  git commit -m "updated a1.txt with terminal outputs and answers"
+  909  git push
+  910  cd cs131/a1/
+  911  history > cmds.log 

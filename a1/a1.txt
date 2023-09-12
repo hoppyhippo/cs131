@@ -1,3 +1,4 @@
+*Questions are marked by question number followed by a ')'.
 2) 'echo' $HOME
 /mnt/scratch/jeffrey23fa
 
@@ -1378,5 +1379,5 @@ REDHAT_BUGZILLA_PRODUCT_VERSION=8.6
 REDHAT_SUPPORT_PRODUCT="Red Hat Enterprise Linux"
 REDHAT_SUPPORT_PRODUCT_VERSION="8.6"
 
-10) Permission for file containing OS version information is lrwxrwxrwx.
+10) Permission for file containing OS version information is lrwxrwxrwx so all users can read, write, and execute.
 lrwxrwxrwx. 1 root root 22 Apr  6  2022 /etc/os-release -> ..//usr/lib/os-release

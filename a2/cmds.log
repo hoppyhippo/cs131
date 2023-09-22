@@ -1,0 +1,50 @@
+ 1)
+  914  head ~/taxidata.tar 
+  916  grep -Ea 2019-05-11.*2019-05-1[1-9] ~/taxidata.tar > 2019-05-11.csv 
+  918  head 2019-05-11.csv 
+  919  cut -d, -f 17 2019-05-11.csv > totalamt2019-05-11.txt
+  920  head totalamt2019-05-11.txt 
+  921  awk '{sum+=$0; count++} END {print sum/count}' totalamt2019-05-11.txt | bc -l > a2.txt
+
+2)
+  923  sort totalamt2019-05-11.txt 
+  924  sort totalamt2019-05-11.txt > sortedtotalamt2019-05-11.txt
+  925  head -n 1 sortedtotalamt2019-05-11.txt 
+  926  sort -r totalamt2019-05-11.txt > sortedtotalamt2019-05-11.txt
+  927  head -n 1 sortedtotalamt2019-05-11.txt 
+  928  head -n 1 sortedtotalamt2019-05-11.txt >> a2.txt 
+
+3)
+  940  grep -Ea \",[3-9].0 ~/taxidata.tar 
+  941  grep -Ea \",[3-9].0 ~/taxidata.tar > 3upcustomers.txt
+  943  head -n 1 ~/taxidata.tar 
+  945  grep -Ea \",\"2019-05 3upcustomers.txt > dropoff2019-05.txt
+  946  cut -d, -f 9 dropoff2019-05.txt | sort -nr > t10dropoffloc2019-05.txt
+  947  head -n 10 t10dropoffloc2019-05.txt 
+  948  cut -d, -f 9 dropoff2019-05.txt | sort -nr | uniq -c | sort -nr > t10dropoffloc2019-05.txt
+  949  head t10dropoffloc2019-05.txt 
+  950  head t10dropoffloc2019-05.txt >> a2.txt 
+  971  cat a2.txt 
+
+4)
+  974  grep -Ea 0,\"2019-05-20 ~/taxidata.tar > 2019-05-20.csv 
+  975  cut -d, -f 8 2019-05-20.csv > pu2019-05-20.txt
+  978  sort -nr pu2019-05-20.txt | uniq -c | sort -nr > sortedpu2019-05-20.txt
+  979  head sortedpu2019-05-20.txt 
+  980  grep -Ea 0,\"2019-05-20.*[Y,N],237.0 ~/taxidata.tar > poppu2019-05-20.csv
+  981  head poppu2019-05-20.csv 
+  982  cut -d, -f 9 poppu2019-05-20.csv > popdo2019-05-20.txt
+  983  head popdo2019-05-20.txt 
+  984  sort -nr popdo2019-05-20.txt | uniq -c | sort -nr > sortedpopdo2019-05-20.txt
+  985  head sortedpopdo2019-05-20.txt 
+  986  head -n 1 sortedpopdo2019-05-20.txt >> a2.txt 
+
+5)
+  988  grep -Ea 0,\"2019 ~/taxidata.tar > pu2019.csv
+  989  head pu2019.csv
+  990  cut -d, -f 8 pu2019.csv > puid2019.txt
+  991  wc -l pu2019.csv
+  992  sort -nr puid2019.txt | uniq -c | sort -nr > sortedpuid2019.txt
+  993  head sortedpuid2019.txt 
+  994  head -n 1 sortedpuid2019.txt >> a2.txt 
+ 1000  history > cmds.log

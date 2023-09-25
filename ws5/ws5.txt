@@ -1,0 +1,4 @@
+23155 do234/1.0.txt
+wc: do234/3.0.txt: No such file or directory
+4464 do234/48.0.txt
+156 do234/223.0.txt

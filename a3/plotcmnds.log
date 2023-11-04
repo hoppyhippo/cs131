@@ -1,0 +1,34 @@
+3) bar plot, correlation between number of passengers and tip amount
+set boxwidth 0.5 relative
+set style fill solid 1.0 
+set style data histograms 
+
+set datafile separator ','
+
+set terminal svg
+set out 'a3t3.svg'
+
+set title "Average Tips by Passengers"
+set xlabel "Numbers of Passengers"
+set ylabel "Tip Amount"
+
+set yrange[0:10]
+
+plot 'avgTip2019-08.csv' using 2:xtic(1) with boxes lc rgb 'green' title "dollars and cents"
+
+4) scatter plot, correlation between travel distance and total amount paid
+set style fill transparent solid 0.2 noborder
+
+set datafile separator ','
+
+set terminal svg
+set out 'a3t4.svg'
+
+set title "Total Amount From Travel Distances" 
+set xlabel "Travel Distance" 
+
+NO_ANIMATION = 1
+set autoscale x
+set yrange [0:*]
+
+plot 'avgTotalAmt2019-08.csv' using 1:2 with circles lc rgb 'red'

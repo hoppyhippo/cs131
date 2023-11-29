@@ -1,0 +1,23 @@
+  236  curl -O https://archive.ics.uci.edu/static/public/89/solar+flare.zip
+  237  unzip solar+flare.zip 
+  238  sudo apt install unzip
+  239  unzip solar+flare.zip 
+  240  vim bin.awk
+  241  vim mysplit.sh
+  242  vim classify.cfg
+  246  mkdir train
+  247  mkdir test
+  258  chmod +x mysplit.sh 
+  283  ./mysplit.sh 
+  285  run_experiment classify.cfg 
+  286  ls train/
+  300  cd output/
+  305  ls output/
+  307  cat solar_flare_data1.csv_DecisionTreeClassifier.results
+  308  cat output/solar_flare_data1.csv_DecisionTreeClassifier.results
+  309  cat output/solar_flare_data1.csv_DecisionTreeClassifier.model 
+  317  cat output/solar_flare_data1.csv_RandomForestClassifier.results
+  318  cat output/solar_flare_data2.csv_DecisionTreeClassifier.results
+  319  cat output/solar_flare_data2.csv_RandomForestClassifier.results
+  320  vim plot1.plt
+  321  vim plot2.plt
